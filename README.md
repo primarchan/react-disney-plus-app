@@ -1,3 +1,37 @@
+# React 기반 Disney Plus App 프로젝트
+
+## Tech Stack
+
+- React 18.2.0
+- Axios 1.4.0
+- JS ES6
+- CSS3
+- HTML5
+
+## Installation
+
+- `npx create-react-app ${프로젝트명}`
+- `npm run start`
+- Axios 모듈 설치
+  - `npm install axios --save`
+- Styled Components 설치 [공식문서 링크](https://styled-components.com)
+  - `npm install --save styled-components`
+
+## API
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org)
+  - Database for movies and TV shows.
+  - [Getting-started](https://developer.themoviedb.org/docs/getting-started)
+- Axios
+  - 웹 브라우저, Node.js 를 위한 Promise API 를 활용하는 HTTP 비동기 통신 라이브러리
+
+## Reference
+
+## Result
+
+<details>
+<summary>Getting Started with Create React App (접기/펼치기)</summary>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +102,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+</details>
