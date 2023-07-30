@@ -38,7 +38,9 @@ const Banner = () => {
   if (isClicked) {
     return (
       <>
-        <button onClick={() => setIsClicked(false)}>X</button>
+        <span onClick={() => setIsClicked(false)} className="video-close">
+          X
+        </span>
         <Container>
           <HomeContainer>
             <Iframe
