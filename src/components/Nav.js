@@ -1,24 +1,35 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [show, setShow] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.screenY > 50) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    });
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.addEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+    navigate(`/search?q=${e.target.value}`);
+  };
+
   return (
-    <NavWrapper $show={show}>
+    <NavWrapper show={show}>
       <Logo>
         <img
           alt="Disney+ Logo"
@@ -26,11 +37,49 @@ const Nav = () => {
           onClick={() => (window.location.href = "/")}
         />
       </Logo>
+
+      {pathname === "/" ? (
+        <Login>Login</Login>
+      ) : (
+        <Input
+          value={searchValue}
+          onChange={handleChange}
+          className="nav__input"
+          type="text"
+          placeholder="검색어를 입력해주세요."
+        />
+      )}
     </NavWrapper>
   );
 };
 
 export default Nav;
+
+const Login = styled.a`
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    background-color: #f9f9f9;
+    color: gray;
+    border-color: transparent;
+  }
+`;
+
+const Input = styled.input`
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.582);
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  border: none;
+`;
 
 const NavWrapper = styled.nav`
   position: fixed;
