@@ -31,6 +31,11 @@
 
 ## Reference
 
+- Firebase 를 이용한 로그인 인증 처리
+  - [공식 홈페이지](https://firebase.google.com/?hl=ko)
+  - Firebase SDK 추가
+    - `npm install firebase`
+
 ## Result
 
 <details>

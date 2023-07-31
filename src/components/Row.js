@@ -21,7 +21,7 @@ import { styled } from "styled-components";
 // };
 
 const Row = ({ title, id, fetchUrl }) => {
-  const [Movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [movieSelected, setMovieSelected] = useState({});
 
@@ -68,8 +68,8 @@ const Row = ({ title, id, fetchUrl }) => {
         }}
       >
         <Content id={id}>
-          {Movies.map((movie) => (
-            <SwiperSlide>
+          {movies.map((movie) => (
+            <SwiperSlide key={movie.id}>
               <Wrap>
                 <img
                   key={movie.id}
