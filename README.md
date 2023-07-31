@@ -35,6 +35,7 @@
   - [공식 홈페이지](https://firebase.google.com/?hl=ko)
   - Firebase SDK 추가
     - `npm install firebase`
+  - Firebase SDK 로 로그인 하는 방법 [공식문서 링크](https://firebase.google.com/docs/auth/web/google-signin#handle_the_sign-in_flow_with_the_firebase_sdk)
 
 ## Result
 
