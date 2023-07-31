@@ -18,6 +18,8 @@
   - `npm install --save styled-components`
 - React Router Dom 설치
   - `npm install react-router-dom --save`
+- Swiper React Components 설치 [공식문서 링크](https://swiperjs.com/react)
+  - `npm install swiper --save`
 
 ## API
 
