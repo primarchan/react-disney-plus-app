@@ -37,6 +37,21 @@
     - `npm install firebase`
   - Firebase SDK 로 로그인 하는 방법 [공식문서 링크](https://firebase.google.com/docs/auth/web/google-signin#handle_the_sign-in_flow_with_the_firebase_sdk)
 - LocalStorage 를 이용한 인증 정보 저장 [공식문서 링크](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- Firebase 를 이용해서 배포
+  - `sudo npm install -g firebase-tools`
+  - `firebase login`
+  - `npm run build`
+  - `firebase init`
+  - Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`
+  - Please select an option: `Use an existing project`
+  - Select a default Firebase project for this directory: react-disney-plus-app-**\*** `(react-disney-plus-app)`
+  - What do you want to use as your public directory? `build`
+  - Configure as a single-page app (rewrite all urls to /index.html)? `Yes`
+  - Set up automatic builds and deploys with GitHub? `No`
+  - File build/index.html already exists. Overwrite? `No`
+  - `build`
+  - `firebase deploy`
+  - Hosting URL: `https://react-disney-plus-app-982fa.web.app`
 
 ## Result
 
