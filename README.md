@@ -36,6 +36,7 @@
   - Firebase SDK 추가
     - `npm install firebase`
   - Firebase SDK 로 로그인 하는 방법 [공식문서 링크](https://firebase.google.com/docs/auth/web/google-signin#handle_the_sign-in_flow_with_the_firebase_sdk)
+- LocalStorage 를 이용한 인증 정보 저장 [공식문서 링크](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## Result
 
